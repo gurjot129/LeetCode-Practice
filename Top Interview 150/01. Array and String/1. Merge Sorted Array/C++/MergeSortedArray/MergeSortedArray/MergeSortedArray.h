@@ -7,7 +7,7 @@ using namespace std;
 
 class Solution {
 public:
-    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n);
+    void merge(vector<int>&, int, vector<int>&, int);
 };
 
 #endif
