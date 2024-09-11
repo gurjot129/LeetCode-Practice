@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\GURJOT\\_CODEBASE\\LeetCode-Practice\\Top Interview 150\\01. Array and String\\1. Merge Sorted Array\\C\u002B\u002B\\v2\\MergeSortedArray\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2AE47070-6015-4973-97EB-18DF5163E4B6}|MergeSortedArray\\MergeSortedArray.vcxproj|C:\\Users\\GURJOT\\_CODEBASE\\LeetCode-Practice\\Top Interview 150\\01. Array and String\\1. Merge Sorted Array\\C\u002B\u002B\\v2\\MergeSortedArray\\MergeSortedArray\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2AE47070-6015-4973-97EB-18DF5163E4B6}|MergeSortedArray\\MergeSortedArray.vcxproj|solutionrelative:MergeSortedArray\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AE47070-6015-4973-97EB-18DF5163E4B6}|MergeSortedArray\\MergeSortedArray.vcxproj|C:\\Users\\GURJOT\\_CODEBASE\\LeetCode-Practice\\Top Interview 150\\01. Array and String\\1. Merge Sorted Array\\C\u002B\u002B\\v2\\MergeSortedArray\\MergeSortedArray\\MergeSortedArray.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2AE47070-6015-4973-97EB-18DF5163E4B6}|MergeSortedArray\\MergeSortedArray.vcxproj|solutionrelative:MergeSortedArray\\MergeSortedArray.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "C:\\Users\\GURJOT\\_CODEBASE\\LeetCode-Practice\\Top Interview 150\\01. Array and String\\1. Merge Sorted Array\\C\u002B\u002B\\v2\\MergeSortedArray\\MergeSortedArray\\Main.cpp",
+              "RelativeDocumentMoniker": "MergeSortedArray\\Main.cpp",
+              "ToolTip": "C:\\Users\\GURJOT\\_CODEBASE\\LeetCode-Practice\\Top Interview 150\\01. Array and String\\1. Merge Sorted Array\\C\u002B\u002B\\v2\\MergeSortedArray\\MergeSortedArray\\Main.cpp",
+              "RelativeToolTip": "MergeSortedArray\\Main.cpp",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA4AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-07T19:24:35.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MergeSortedArray.cpp",
+              "DocumentMoniker": "C:\\Users\\GURJOT\\_CODEBASE\\LeetCode-Practice\\Top Interview 150\\01. Array and String\\1. Merge Sorted Array\\C\u002B\u002B\\v2\\MergeSortedArray\\MergeSortedArray\\MergeSortedArray.cpp",
+              "RelativeDocumentMoniker": "MergeSortedArray\\MergeSortedArray.cpp",
+              "ToolTip": "C:\\Users\\GURJOT\\_CODEBASE\\LeetCode-Practice\\Top Interview 150\\01. Array and String\\1. Merge Sorted Array\\C\u002B\u002B\\v2\\MergeSortedArray\\MergeSortedArray\\MergeSortedArray.cpp",
+              "RelativeToolTip": "MergeSortedArray\\MergeSortedArray.cpp",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAACkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-07T19:31:00.723Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

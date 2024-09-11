@@ -1,0 +1,7 @@
+﻿  Main.cpp
+  MergeSortedArray.cpp
+C:\Users\GURJOT\_CODEBASE\LeetCode-Practice\Top Interview 150\01. Array and String\1. Merge Sorted Array\C++\v2\MergeSortedArray\MergeSortedArray\MergeSortedArray.cpp(14,9): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\GURJOT\_CODEBASE\LeetCode-Practice\Top Interview 150\01. Array and String\1. Merge Sorted Array\C++\v2\MergeSortedArray\MergeSortedArray\MergeSortedArray.cpp(17,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\GURJOT\_CODEBASE\LeetCode-Practice\Top Interview 150\01. Array and String\1. Merge Sorted Array\C++\v2\MergeSortedArray\MergeSortedArray\MergeSortedArray.cpp(18,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+  MergeSortedArray.vcxproj -> C:\Users\GURJOT\_CODEBASE\LeetCode-Practice\Top Interview 150\01. Array and String\1. Merge Sorted Array\C++\v2\MergeSortedArray\x64\Debug\MergeSortedArray.exe
