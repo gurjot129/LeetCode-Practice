@@ -7,8 +7,7 @@ public class Main {
         int m = 3;
         int[] nums2 = { 2, 5, 6 };
         int n = 3;
-
-
+        
         MergeSortedArray msa = new MergeSortedArray();
         msa.merge(nums1, m,  nums2, n);
 
