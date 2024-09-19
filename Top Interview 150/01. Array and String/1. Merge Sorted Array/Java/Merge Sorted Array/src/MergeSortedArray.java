@@ -10,6 +10,11 @@ public class MergeSortedArray {
         //checks if nums2 is empty
         if(nums2.length != 0) {
 
+            //ensures that the nums1 index value initially isn't negative
+            if(nums1Idx < 0) {
+                nums1Idx = 0;
+            }
+
             //helps with sorting nums1 array
             while(currIdx >= 0) {
 
