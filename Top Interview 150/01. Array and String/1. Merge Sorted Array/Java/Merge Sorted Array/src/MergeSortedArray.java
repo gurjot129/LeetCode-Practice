@@ -3,17 +3,12 @@ public class MergeSortedArray {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
 
         //keeps track of which elements we are comparing
-        int nums1Idx = m - 1;
+        int nums1Idx = Math.max(m - 1, 0);
         int nums2Idx = nums2.length - 1;
         int currIdx = nums1.length - 1;
 
         //checks if nums2 is empty
         if(nums2.length != 0) {
-
-            //ensures that the nums1 index value initially isn't negative
-            if(nums1Idx < 0) {
-                nums1Idx = 0;
-            }
 
             //helps with sorting nums1 array
             while(currIdx >= 0) {
