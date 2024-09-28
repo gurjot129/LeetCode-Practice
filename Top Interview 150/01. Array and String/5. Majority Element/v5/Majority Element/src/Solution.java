@@ -5,7 +5,7 @@ class Solution {
         //create and initializes variables
         int k = 0;
         int valIdx = 0;
-        ValCount[] valCount = new ValCount[4];
+        ValCount[] valCount = new ValCount[nums.length];
 
         for(int i = 0; i < valCount.length; ++i) {
             valCount[i] = new ValCount();
