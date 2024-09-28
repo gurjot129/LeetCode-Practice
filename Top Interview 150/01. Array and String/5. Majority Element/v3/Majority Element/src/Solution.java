@@ -5,7 +5,7 @@ class Solution {
 
         //create and initializes variables
         int k = 0;
-        int[][] valCount = new int[nums.length + 6][1];
+        int[][] valCount = new int[nums.length + 1000000000][1];
 
         int leftIdx = 0;
         int rightIdx = nums.length - 1;
@@ -19,15 +19,28 @@ class Solution {
 
                 //if the left and right indices equal to each, only use the left side logic to avoid working on the same index twice
                 if(leftIdx != rightIdx) {
-                    ++valCount[nums[leftIdx]][0];
-                    ++leftIdx;
 
-                    ++valCount[nums[rightIdx]][0];
-                    --rightIdx;
+                    if(nums[leftIdx] > 0) {
+                        ++valCount[nums[leftIdx]][0];
+                        ++leftIdx;
+                    } else {
+                        ++leftIdx;
+                    }
+
+                    if(nums[rightIdx] > 0) {
+                        ++valCount[nums[rightIdx]][0];
+                        --rightIdx;
+                    } else {
+                        --rightIdx;
+                    }
 
                 } else {
-                    ++valCount[nums[leftIdx]][0];
-                    ++leftIdx;
+                    if(nums[leftIdx] > 0) {
+                        ++valCount[nums[leftIdx]][0];
+                        ++leftIdx;
+                    } else {
+                        ++leftIdx;
+                    }
                 }
             }
 
