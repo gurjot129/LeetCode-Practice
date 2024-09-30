@@ -11,8 +11,12 @@ public class Main {
 //        int k = 3;
 
         //test case #2
-        int[] nums = { -1,-100,3,99 };
-        int k = 2;
+//        int[] nums = { -1,-100,3,99 };
+//        int k = 2;
+
+        //test case #31
+        int[] nums = { 1, 2, 3 };
+        int k = 3;
 
         s.rotate(nums, k);
 
