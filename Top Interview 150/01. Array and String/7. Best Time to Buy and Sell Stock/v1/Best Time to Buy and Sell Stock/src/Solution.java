@@ -8,7 +8,7 @@ public class Solution {
         int sell = 0;
 
         //this code helps find the best time to buy
-        for(int i = 1; i < prices.length; ++i) {
+        for(int i = 1; i < prices.length - 1; ++i) {
             if(prices[i] < buy) {
                buy = prices[i];
                buyIdx = i;
