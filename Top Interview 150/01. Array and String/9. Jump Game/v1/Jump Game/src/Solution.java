@@ -13,6 +13,7 @@ public class Solution {
             for(int i = 1; (i + jumps) < nums.length && i <= nums[jumps]; ++i) {
 
                 if((i + nums[jumps + i]) > maxJumps && nums[jumps + i] != 0) {
+                    maxJumps = i + nums[jumps + i];
                     numOfJumps = i;
                 }
             }
