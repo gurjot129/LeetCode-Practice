@@ -59,7 +59,7 @@ public class Solution {
                     ++sellIdxProfitsLen;
                 }
             }
-            else {
+            else if (sellIdx < prices.length - 1) {
                 buyIdx = sellIdx;
             }
 
