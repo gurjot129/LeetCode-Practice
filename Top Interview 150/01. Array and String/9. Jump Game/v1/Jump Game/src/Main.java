@@ -7,7 +7,13 @@ public class Main {
 //        int[] nums = { 2,3,1,1,4 };
 
         //test case #2
-        int[] nums = { 3,2,1,0,4 };
+//        int[] nums = { 3,2,1,0,4 };
+
+        //test case #7
+        //int[] nums = { 2,0 };
+
+        //test case #8
+        int[] nums = { 2,0,0 };
 
         boolean canJump = s.canJump(nums);
 
