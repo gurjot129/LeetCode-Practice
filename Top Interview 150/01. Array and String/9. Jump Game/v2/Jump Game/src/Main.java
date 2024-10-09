@@ -10,7 +10,7 @@ public class Main {
 //        int[] nums = { 3,2,1,0,4 };
 
         //test case #7
-        //int[] nums = { 2,0 };
+//        int[] nums = { 2,0 };
 
         //test case #8
 //        int[] nums = { 2,0,0 };
