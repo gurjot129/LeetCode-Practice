@@ -12,8 +12,8 @@ public class Solution {
         //creates and initializes variables
         boolean canJump = false;
 
-        //if the amount of jumps reaches the final index, return true
-        if(jumps >= (nums.length - 1)) {
+        //if the amount of jumps or max jumps in an element reaches the final index, return true
+        if(jumps >= (nums.length - 1) || nums[jumps] >= (nums.length - 1)) {
             canJump = true;
 
         //doesn't check any element with values of 0, since we can't jump forward "0" spaces

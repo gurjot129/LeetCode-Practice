@@ -25,6 +25,5 @@ public class Main {
 
         System.out.println("Final Results:");
         System.out.println("canJump: " + canJump);
-
     }
 }
