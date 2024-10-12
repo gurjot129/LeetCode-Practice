@@ -6,7 +6,7 @@ public class Main {
         //test case #1
 //        int[] citations = { 3,0,6,1,5 };
 
-        //test case #1
+        //test case #2
         int[] citations = { 1,3,1 };
 
         int hIndex = s.hIndex(citations);
