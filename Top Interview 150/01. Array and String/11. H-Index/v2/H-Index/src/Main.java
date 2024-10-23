@@ -4,10 +4,10 @@ public class Main {
         Solution s = new Solution();
 
         //test case #1
-//        int[] citations = { 3,0,6,1,5 };
+        int[] citations = { 3,0,6,1,5 };
 
         //test case #2
-        int[] citations = { 1,3,1 };
+//        int[] citations = { 1,3,1 };
 
         int hIndex = s.hIndex(citations);
 
