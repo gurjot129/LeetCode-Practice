@@ -1,22 +1,37 @@
+import java.util.ArrayList;
+
 class RandomizedSet {
 
-    public RandomizedSet() {
+    private ArrayList<Integer> items;
 
+    public RandomizedSet() {
+        items = new ArrayList<Integer>();
     }
 
     public boolean insert(int val) {
 
-        return true;
+        if(items.contains(val)) {
+            return false;
+        } else {
+            items.add(val);
+            return true;
+        }
     }
 
     public boolean remove(int val) {
 
-        return true;
+        int valIdx = items.indexOf(val);
+
+        if(valIdx != -1) {
+            items.remove(valIdx);
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public int getRandom() {
-
-        return 0;
+        return items.get((int) (Math.random() * (items.size() - 1)));
     }
 }
 
