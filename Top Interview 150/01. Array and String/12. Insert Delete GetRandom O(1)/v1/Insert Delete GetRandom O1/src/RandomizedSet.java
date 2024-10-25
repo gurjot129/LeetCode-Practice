@@ -1,11 +1,15 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 class RandomizedSet {
 
+    //creates and initializes variables
     private ArrayList<Integer> items;
+    private Random random;
 
     public RandomizedSet() {
         items = new ArrayList<Integer>();
+        random = new Random();
     }
 
     public boolean insert(int val) {
@@ -31,7 +35,7 @@ class RandomizedSet {
     }
 
     public int getRandom() {
-        return items.get((int) (Math.random() * (items.size() - 1)));
+        return items.get(random.nextInt(items.size()));
     }
 }
 
