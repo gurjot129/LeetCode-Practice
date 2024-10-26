@@ -9,12 +9,14 @@ class RandomizedSet {
     private ArrayList<Integer> items;
     private HashMap<Integer, Integer> hashItems;
     private Random random;
+    int hashCount;
 
     public RandomizedSet() {
 
         items = new ArrayList<>();
         hashItems = new HashMap<>();
         random = new Random();
+        hashCount = 0;
     }
 
     public boolean insert(int val) {
@@ -24,7 +26,7 @@ class RandomizedSet {
         }
 
         items.add(val);
-        hashItems.put(items.size(), val);
+        hashItems.put(hashCount++, val);
 
         return true;
     }
