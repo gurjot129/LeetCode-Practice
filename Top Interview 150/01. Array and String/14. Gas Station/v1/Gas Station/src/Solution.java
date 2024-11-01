@@ -7,6 +7,7 @@ public class Solution {
 
             //car starts from empty tank
             int gasTank = 0;
+            boolean isTravelCircuit = true;
 
             //starts at the ith gas station, calculates and checks if the car is able to travel around the circuit
             for(int j = 0; j < gas.length - 1; ++j) {
@@ -14,11 +15,14 @@ public class Solution {
                 gasTank -= cost[(i + j) % (gas.length)];
 
                 //if the car is out of gas, start again but at the next gas station
-                if(gasTank <= 0) break;
+                if(gasTank <= 0) {
+                    isTravelCircuit = false;
+                    break;
+                }
             }
 
             //if the car is able to travel around the circuit, return starting ith gas station
-            if(gasTank >= 0) return i;
+            if(gasTank >= 0 && isTravelCircuit) return i;
         }
 
         //if no starting gas station is able to travel around the circuit, return -1
