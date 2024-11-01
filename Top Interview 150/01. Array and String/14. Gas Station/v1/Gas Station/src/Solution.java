@@ -14,7 +14,7 @@ public class Solution {
                 gasTank += gas[(i + j) % (gas.length)];
                 gasTank -= cost[(i + j) % (gas.length)];
 
-                //if the car is out of gas, start again but at the next gas station
+                //if the car is out of gas before travelling around the circuit, start again but at the next gas station
                 if(gasTank <= 0 && j < gas.length - 1) {
                     isTravelCircuit = false;
                     break;
