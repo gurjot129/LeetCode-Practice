@@ -4,7 +4,10 @@ public class Main {
         Solution s = new Solution();
 
         //test case #1
-        int[] ratings = { 1,0,2 };
+//        int[] ratings = { 1,0,2 };
+
+        //test case #2
+        int[] ratings = { 1,2,2 };
 
         int minCandies = s.candy(ratings);
 
