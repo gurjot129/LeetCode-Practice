@@ -4,7 +4,13 @@ public class Main {
         Solution s = new Solution();
 
         //test case #1
-        String roman = "III";
+//        String roman = "III";
+
+        //test case #2
+//        String roman = "LVIII";
+
+        //test case #3
+        String roman = "MCMXCIV";
 
         int integer = s.romanToInt(roman);
 
