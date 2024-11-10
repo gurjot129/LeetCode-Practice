@@ -4,7 +4,13 @@ public class Main {
         Solution s = new Solution();
 
         //test case #1
-        int integer = 3749;
+//        int integer = 3749;
+
+        //test case #2
+//        int integer = 58;
+
+        //test case #3
+        int integer = 1994;
 
         String roman = s.intToRoman(integer);
 
