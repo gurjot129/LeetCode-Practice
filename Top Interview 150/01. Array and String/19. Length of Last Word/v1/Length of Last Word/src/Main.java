@@ -4,8 +4,13 @@ public class Main {
         Solution s = new Solution();
 
         //test case #1
-        String string = "Hello World";
+//        String string = "Hello World";
 
+        //test case #2
+//        String string = "   fly me   to   the moon  ";
+
+        //test case #3
+        String string = "luffy is still joyboy";
 
         int lastWordLength = s.lengthOfLastWord(string);
 
