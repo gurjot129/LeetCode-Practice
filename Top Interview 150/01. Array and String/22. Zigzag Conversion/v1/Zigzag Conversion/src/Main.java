@@ -5,8 +5,13 @@ public class Main {
 
         //test case #1
         String string = "PAYPALISHIRING";
+        int numRows = 3;
 
-        int zigzag = s.convert(string);
+        //test case #2
+//        String string = "PAYPALISHIRING";
+//        int numRows = 4;
+
+        String zigzag = s.convert(string, numRows);
 
         System.out.println("Final Results:");
         System.out.println("ZigZag Conversion: " + zigzag);
