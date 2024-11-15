@@ -6,8 +6,16 @@ public class Main {
         Solution s = new Solution();
 
         //test case #1
-        String[] words = { "This", "is", "an", "example", "of", "text", "justification." };
-        int maxWidth = 16;
+//        String[] words = { "This", "is", "an", "example", "of", "text", "justification." };
+//        int maxWidth = 16;
+
+        //test case #2
+//        String[] words = { "What","must","be","acknowledgment","shall","be" };
+//        int maxWidth = 16;
+
+        //test case #3
+        String[] words = { "Science","is","what","we","understand","well","enough","to","explain","to","a","computer.","Art","is","everything","else","we","do" };
+        int maxWidth = 20;
 
         List<String> result = s.fullJustify(words, maxWidth);
 
@@ -15,6 +23,5 @@ public class Main {
         System.out.println("Text Justified: ");
         for(String sentence : result)
             System.out.println(sentence);
-
     }
 }
