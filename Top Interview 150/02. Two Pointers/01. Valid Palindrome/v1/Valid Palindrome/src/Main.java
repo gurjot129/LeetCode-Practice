@@ -5,7 +5,10 @@ public class Main {
         Solution s = new Solution();
 
         //test case #1
-        String str = "A man, a plan, a canal: Panama";
+//        String str = "A man, a plan, a canal: Panama";
+
+        //test case #2
+        String str = "ab_a";
 
         boolean result = s.isPalindrome(str);
 
