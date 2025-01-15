@@ -12,9 +12,11 @@ public class Solution {
             //that way, we don't have to worry about skipping the left pointer index
             int rPtr = (lPtr + 1) % numbers.length;
 
+            int i = 0;
+
             //iterates through the numbers array with the right pointer,
             //comparing both left and right pointer values to the target
-            while(rPtr < numbers.length - 1) {
+            while(i < numbers.length) {
 
                 //if the summed pointer values match target, return indices with +1 to each index
                 if(numbers[lPtr] + numbers[rPtr] == target)
@@ -25,6 +27,8 @@ public class Solution {
                     rPtr = 0;
                 else
                     ++rPtr;
+
+                ++i;
             }
 
             ++lPtr;

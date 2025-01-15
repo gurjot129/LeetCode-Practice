@@ -6,8 +6,12 @@ public class Main {
         Solution solution = new Solution();
 
         //test case #1
-        int [] numbers = {2,7,11,15};
-        int target = 9;
+//        int [] numbers = {2,7,11,15};
+//        int target = 9;
+
+        //test case #2
+        int [] numbers = {2,3,4};
+        int target = 6;
 
         int[] result = solution.twoSum(numbers, target);
 
