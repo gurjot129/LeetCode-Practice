@@ -12,7 +12,11 @@ public class Main {
 //        String t = "ahbgdc";
 
         //test case #3
-        String s = "";
+//        String s = "";
+//        String t = "ahbgdc";
+
+        //test case #4
+        String s = "acb";
         String t = "ahbgdc";
 
         boolean result = solution.isSubsequence(s, t);

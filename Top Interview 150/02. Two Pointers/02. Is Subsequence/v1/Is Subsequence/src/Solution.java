@@ -31,7 +31,7 @@ public class Solution {
                 }
             }
 
-            if(sIdx == s.length() - 1) {
+            if(sIdx == s.length()) {
                 isSubsequenceFound = true;
             }
         }
