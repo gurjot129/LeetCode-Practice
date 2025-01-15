@@ -9,7 +9,7 @@ public class Solution {
         boolean isFirstLetterFound = false;
         boolean isSubsequenceFound = false;
 
-        while(lPtr < t.length() && rPtr < t.length() && !isSubsequenceFound) {
+        while(!s.isEmpty() && !t.isEmpty() && lPtr < t.length() && rPtr < t.length() && sIdx != s.length() - 1) {
 
             if(!isFirstLetterFound) {
 
@@ -36,6 +36,6 @@ public class Solution {
             }
         }
 
-        return isSubsequenceFound;
+        return s.isEmpty() ? true : isSubsequenceFound;
     }
 }

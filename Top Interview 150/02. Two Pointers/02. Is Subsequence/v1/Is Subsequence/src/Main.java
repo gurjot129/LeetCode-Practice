@@ -8,7 +8,11 @@ public class Main {
 //        String t = "ahbgdc";
 
         //test case #2
-        String s = "axc";
+//        String s = "axc";
+//        String t = "ahbgdc";
+
+        //test case #3
+        String s = "";
         String t = "ahbgdc";
 
         boolean result = solution.isSubsequence(s, t);
