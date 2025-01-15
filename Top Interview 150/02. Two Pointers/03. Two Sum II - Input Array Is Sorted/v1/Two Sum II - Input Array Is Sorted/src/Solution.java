@@ -8,6 +8,12 @@ public class Solution {
         //iterates through the numbers array
         while(lPtr < numbers.length) {
 
+            //this ensures that we are not dealing with duplicates, this is to avoid time limit exceeding
+            if(lPtr != 0 && numbers[lPtr - 1] == numbers[lPtr]) {
+                ++lPtr;
+                continue;
+            }
+
             //creates a starting point for the right pointer one index ahead of the left pointer
             //that way, we don't have to worry about skipping the left pointer index
             int rPtr = (lPtr + 1) % numbers.length;
