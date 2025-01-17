@@ -11,7 +11,7 @@ public class Main {
         List<List<Integer>> result = solution.threeSum(nums);
 
         System.out.println("*** FINAL RESULTS ***");
-        System.out.println("Is Subsequence: ");
-        System.out.println(result);
+        System.out.println("3 Sum sets: ");
+        System.out.println(result.toString());
     }
 }
