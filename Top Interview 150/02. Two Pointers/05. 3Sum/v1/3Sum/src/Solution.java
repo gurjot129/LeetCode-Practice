@@ -19,10 +19,18 @@ public class Solution {
                 while(rPtr < nums.length) {
                     if(nums[i] + nums[lPtr] + nums[rPtr] == 0) {
 
+                        System.out.println("POTENTIAL SET: " + Arrays.asList(nums[i], nums[lPtr], nums[rPtr]));
+
                         boolean isDistinct = true;
 
                         for(List<Integer> r : res) {
-                            if(r.contains(nums[i]) && r.contains(nums[lPtr])) {
+
+                            List<Integer> c = Arrays.asList(nums[i], nums[lPtr], nums[rPtr]);
+
+                            r.sort(null);
+                            c.sort(null);
+
+                            if(r.get(0) == c.get(0) && r.get(1) == c.get(1) && r.get(2) == c.get(2)) {
                                 isDistinct = false;
                                 break;
                             }
