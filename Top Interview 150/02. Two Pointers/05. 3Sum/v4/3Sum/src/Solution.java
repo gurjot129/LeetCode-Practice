@@ -9,7 +9,32 @@ public class Solution {
 
         Set<List<Integer>> res = new HashSet<>();
 
+        Arrays.sort(nums);
 
+        System.out.println(Arrays.toString(nums));
+
+        for(int i = 0; i < nums.length; ++i) {
+
+            if(i != 0 && nums[i - 1] == nums[i])
+                continue;
+
+            int lPtr = i + 1;
+            int rPtr = nums.length - 1;
+
+            while(lPtr < rPtr ) {
+
+                if(nums[i] + nums[lPtr] + nums[rPtr] == 0) {
+                    List<Integer> list = Arrays.asList(nums[i], nums[lPtr], nums[rPtr]);
+                    list.sort(null);
+                    res.add(list);
+                }
+
+                if(nums[i] + nums[lPtr] + nums[rPtr] < 0)
+                    ++lPtr;
+                else
+                    --rPtr;
+            }
+        }
 
         return res.stream().toList();
     }
