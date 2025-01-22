@@ -8,7 +8,7 @@ public class Main {
         int target = 7;
         int[] nums = {2,3,1,2,4,3};
 
-        int result = solution.threeSum(nums);
+        int result = solution.minSubArrayLen(target, nums);
 
         System.out.println("*** FINAL RESULTS ***");
         System.out.println("Minimum Sub-Array Length: ");
