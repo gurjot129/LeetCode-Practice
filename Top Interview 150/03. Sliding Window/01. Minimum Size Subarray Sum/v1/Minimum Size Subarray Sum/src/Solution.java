@@ -13,7 +13,6 @@ public class Solution {
                 //this iterative statement sums up all the values from the subarray
                 for(int k = 0; k < i + 1; ++k)
                     total += nums[j + k];
-                
 
                 //this statement returns the minimum array size if the subarray total greater or equal to the target
                 if(total >= target)
