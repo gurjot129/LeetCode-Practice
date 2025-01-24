@@ -5,7 +5,10 @@ public class Main {
         Solution solution = new Solution();
 
         //test case #1
-        String s = "abcabcbb";
+//        String s = "abcabcbb";
+
+        //test case #408
+        String s = "dvdf";
 
         int result = solution.lengthOfLongestSubstring(s);
 
