@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ForkJoinWorkerThread;
 
@@ -12,6 +13,7 @@ public class Solution {
         if(s != null && !s.isEmpty()) {
 
             List<Integer> wordsFoundIdcs = new ArrayList<Integer>();
+            List<String> wordList = new ArrayList<String>(Arrays.asList(words));
 
             for(int i = 0; i < (s.length() - (words[0].length() * words.length)); ++i) {
 
@@ -20,23 +22,22 @@ public class Solution {
 
                 for(int j = 0; j < words.length; ++j) {
 
-                    if(!wordsFoundIdcs.contains(j)) {
+                    
 
-                        String substrTest = s.substring(lPtr, rPtr + 1);
-                        boolean equalsTest = substrTest.equals(words[j]);
+                    if(wordList.contains(s.substring(lPtr, rPtr + 1))) {
 
-                        if(s.substring(lPtr, rPtr + 1).equals(words[j])) {
-                            wordsFoundIdcs.add(j);
-                            lPtr += words[0].length();
-                            rPtr += words[0].length();
-                        }
+                        wordList.remove(s.substring(lPtr, rPtr + 1));
+
+                        lPtr += words[0].length();
+                        rPtr += words[0].length();
+
+                    } else {
+                        break;
                     }
                 }
 
-
-
-                if (wordsFoundIdcs.size() == words.length) {
-                    startingIndices.add(i);
+                if(wordList.isEmpty()) {
+                    wordsFoundIdcs.add(i);
                 }
             }
         }
