@@ -6,8 +6,12 @@ public class Main {
         Solution solution = new Solution();
 
         //test case #1
-        String s = "barfoothefoobarman";
-        String[] words = {"foo","bar"};
+//        String s = "barfoothefoobarman";
+//        String[] words = {"foo","bar"};
+
+        //test case #134
+        String s = "wordgoodgoodgoodbestword";
+        String[] words = {"word","good","best","good"};
 
         List<Integer> result = solution.findSubstring(s, words);
 

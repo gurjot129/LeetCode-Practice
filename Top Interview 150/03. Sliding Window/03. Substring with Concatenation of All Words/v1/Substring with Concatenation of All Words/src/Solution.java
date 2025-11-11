@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.ForkJoinWorkerThread;
 
 public class Solution {
 
@@ -12,17 +11,18 @@ public class Solution {
 
         if(s != null && !s.isEmpty()) {
 
-            List<Integer> wordsFoundIdcs = new ArrayList<Integer>();
-            List<String> wordList = new ArrayList<String>(Arrays.asList(words));
-
-            for(int i = 0; i < (s.length() - (words[0].length() * words.length)); ++i) {
+            for(int i = 0; i < s.length() && (i + words[0].length() - 1) < s.length(); ++i) {
 
                 int lPtr = i;
                 int rPtr = lPtr + words[0].length() - 1;
 
-                for(int j = 0; j < words.length; ++j) {
+                List<String> wordList = new ArrayList<String>(Arrays.asList(words));
 
-                    
+                for(int j = 0; j < words.length && rPtr < s.length(); ++j) {
+
+                    //debugging purposes
+                    String substrTest = s.substring(lPtr, rPtr + 1);
+                    boolean equalsTest = wordList.contains(s.substring(lPtr, rPtr + 1));
 
                     if(wordList.contains(s.substring(lPtr, rPtr + 1))) {
 
@@ -37,7 +37,7 @@ public class Solution {
                 }
 
                 if(wordList.isEmpty()) {
-                    wordsFoundIdcs.add(i);
+                    startingIndices.add(i);
                 }
             }
         }
