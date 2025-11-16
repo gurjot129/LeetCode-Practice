@@ -6,8 +6,12 @@ public class Main {
         Solution solution = new Solution();
 
         //test case #1
-        String s = "ADOBECODEBANC";
-        String t = "ABC";
+//        String s = "ADOBECODEBANC";
+//        String t = "ABC";
+
+        //test case #193
+        String s = "aaaaaaaaaaaabbbbbcdd";
+        String t = "abcdd";
 
         String result = solution.minWindow(s, t);
 

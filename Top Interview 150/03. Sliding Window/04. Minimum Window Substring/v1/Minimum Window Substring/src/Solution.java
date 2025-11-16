@@ -46,8 +46,7 @@ public class Solution {
                             }
                         }
 
-                    } else
-                        break;
+                   }
                 }
 
                 if(charCheck.isEmpty()) {
