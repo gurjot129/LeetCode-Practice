@@ -21,6 +21,6 @@ public class Main {
         System.out.println("*** FINAL RESULTS ***");
         System.out.println("Is Valid Sudoku: ");
         System.out.println(result);
-        
+
     }
 }
