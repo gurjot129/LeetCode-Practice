@@ -1,5 +1,5 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Solution {
 
@@ -8,25 +8,55 @@ public class Solution {
         //creates and initializes variables
         boolean isValidSudoku = true;
 
-        for(int i = 0; i < board.length && isValidSudoku; i += 3) {
+        Set<Character> cmpValues = new HashSet<>();
 
-            List<Character> cmpValues = new ArrayList<>();
+        //checks each row
+        for(int i = 0; i < board.length && isValidSudoku; ++i) {
 
-            for(int j = 0; j < board.length % 3 && isValidSudoku; ++j) {
+            for(int j = 0; j < board.length && isValidSudoku; ++j)
+                if(board[i][j] != '.') isValidSudoku = cmpValues.add(board[i][j]);
 
-                if( (!cmpValues.contains(board[i][j]) && !cmpValues.contains(board[i + 1][j + 1]) && !cmpValues.contains(board[i + 2][j + 2])) &&
-                     board[i][j] != board[i + 1][j + 1] &&
-                     board[i][j] != board[i + 2][j + 2] &&
-                     board[i + 1][j + 1] != board[i + 2][j + 2]) {
+            cmpValues.clear();
+        }
 
-                    cmpValues.add(board[i][j]);
-                    cmpValues.add(board[i + 1][j + 1]);
-                    cmpValues.add(board[i + 2][j + 2]);
+        //checks each column
+        for(int i = 0; i < board.length && isValidSudoku; ++i) {
 
-                } else
-                    isValidSudoku = false;
+            for(int j = 0; j < board.length && isValidSudoku; ++j)
+                if(board[j][i] != '.') isValidSudoku = cmpValues.add(board[j][i]);
 
+            cmpValues.clear();
+        }
+
+
+        //checks each 3 x 3 square
+        for(int i = 0; i < board.length && isValidSudoku;) {
+
+            for(int j = 0; j < 3 && isValidSudoku; ++j) {
+                if(board[j][i] != '.' && isValidSudoku) isValidSudoku = cmpValues.add(board[j][i]);
+                if(board[j][i + 1] != '.' && isValidSudoku) isValidSudoku = cmpValues.add(board[j][i + 1]);
+                if(board[j][i + 2] != '.' && isValidSudoku) isValidSudoku = cmpValues.add(board[j][i + 2]);
             }
+
+            cmpValues.clear();
+
+            for(int j = 3; j < 6 && isValidSudoku; ++j) {
+                if(board[j][i] != '.' && isValidSudoku) isValidSudoku = cmpValues.add(board[j][i]);
+                if(board[j][i + 1] != '.' && isValidSudoku) isValidSudoku = cmpValues.add(board[j][i + 1]);
+                if(board[j][i + 2] != '.' && isValidSudoku) isValidSudoku = cmpValues.add(board[j][i + 2]);
+            }
+
+            cmpValues.clear();
+
+            for(int j = 6; j < 9 && isValidSudoku; ++j) {
+                if(board[j][i] != '.' && isValidSudoku) isValidSudoku = cmpValues.add(board[j][i]);
+                if(board[j][i + 1] != '.' && isValidSudoku) isValidSudoku = cmpValues.add(board[j][i + 1]);
+                if(board[j][i + 2] != '.' && isValidSudoku) isValidSudoku = cmpValues.add(board[j][i + 2]);
+            }
+
+            cmpValues.clear();
+
+            i += 3;
         }
 
         return isValidSudoku;
