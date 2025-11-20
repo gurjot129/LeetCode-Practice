@@ -19,8 +19,15 @@ public class Solution {
 
         for(int i = 0; i < matrixSize; ++i) {
 
+            //adds element to the spiral result
             result.add(matrix[row][col]);
 
+            //handles single element arrays edge-case
+            if(direction == 'r' && matrix[0].length == 1) {
+                direction = 'd';
+            }
+
+            //iterates in a specific direction
             if(direction == 'r') {
                 ++col;
             } else if(direction == 'd') {
@@ -31,6 +38,7 @@ public class Solution {
                 --row;
             }
 
+            //changes direction, when certain limits are met
             if(direction == 'r' && col == rLimit) {
                 direction = 'd';
                 --rLimit;
