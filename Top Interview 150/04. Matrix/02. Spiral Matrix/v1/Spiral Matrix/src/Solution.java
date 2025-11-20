@@ -16,7 +16,7 @@ public class Solution {
         int lLimit = 0;
         int uLimit = 0;
 
-
+        //iterates through 2d array
         for(int i = 0; i < matrixSize; ++i) {
 
             //adds element to the spiral result
