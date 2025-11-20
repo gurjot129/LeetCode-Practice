@@ -16,7 +16,7 @@ public class Main {
 
         System.out.println("*** FINAL RESULTS ***");
         System.out.println("Spiral Matrix Solution: ");
-        System.out.println(result);
+        System.out.println(result.toString());
 
     }
 }
