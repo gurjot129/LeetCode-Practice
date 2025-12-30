@@ -6,12 +6,12 @@ public class Main {
 
         //test case #1
         int[][] matrix = {
-                {1, 2, 3},
-                {4, 5, 6},
-                {7, 8, 9}
+                {1, 1, 1},
+                {1, 0, 1},
+                {1, 1, 1}
         };
 
-        solution.setZeroes(matrix);
+        solution.rotate(matrix);
 
         System.out.println("*** FINAL RESULTS ***");
         System.out.println("Rotate Solution: ");
