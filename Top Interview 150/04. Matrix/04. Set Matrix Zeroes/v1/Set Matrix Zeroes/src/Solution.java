@@ -7,6 +7,7 @@ public class Solution {
 
         List<int[]> zeroes = new ArrayList<>();
 
+        //finds all the zeroes, and stores it in an array
         for(int i = 0; i < matrix.length; ++i) {
 
             for(int j = 0; j < matrix[i].length; ++j) {
@@ -16,6 +17,7 @@ public class Solution {
             }
         }
 
+        //converts all the relevant rows and columens to zeroes
         for(int i = 0; i < zeroes.size(); ++i) {
 
             for(int r = 0; r < matrix[0].length; ++r)
