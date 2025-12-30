@@ -11,7 +11,7 @@ public class Main {
                 {7, 8, 9}
         };
 
-        solution.setZeroes(matrix);
+        solution.rotate(matrix);
 
         System.out.println("*** FINAL RESULTS ***");
         System.out.println("Rotate Solution: ");

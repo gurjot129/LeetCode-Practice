@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -11,10 +13,12 @@ public class Main {
                 {1, 1, 1}
         };
 
-        solution.rotate(matrix);
+        solution.setZeroes(matrix);
 
         System.out.println("*** FINAL RESULTS ***");
-        System.out.println("Rotate Solution: ");
-        System.out.println(matrix);
+        System.out.println("Solution: ");
+        for (int[] row : matrix) {
+            System.out.println(Arrays.toString(row));
+        }
     }
 }
