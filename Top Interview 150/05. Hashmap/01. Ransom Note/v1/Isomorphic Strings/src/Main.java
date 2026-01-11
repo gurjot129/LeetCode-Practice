@@ -4,8 +4,12 @@ public class Main {
         Solution solution = new Solution();
 
         //test case #1
-        String s = "egg";
-        String t = "add";
+//        String s = "egg";
+//        String t = "add";
+
+        //test case #41
+        String s = "badc";
+        String t = "baba";
 
         boolean result = solution.isIsomorphic(s, t);
 
