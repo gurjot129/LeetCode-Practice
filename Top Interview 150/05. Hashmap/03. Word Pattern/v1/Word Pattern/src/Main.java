@@ -8,8 +8,16 @@ public class Main {
 //        String s = "dog cat cat dog";
 
         //test case #2
-        String pattern = "abba";
-        String s = "dog cat cat fish";
+//        String pattern = "abba";
+//        String s = "dog cat cat fish";
+
+        //test case #20
+//        String pattern = "aaa";
+//        String s = "aa aa aa aa";
+
+        //test case #43
+        String pattern = "he";
+        String s = "unit";
 
         boolean result = solution.wordPattern(pattern, s);
 
