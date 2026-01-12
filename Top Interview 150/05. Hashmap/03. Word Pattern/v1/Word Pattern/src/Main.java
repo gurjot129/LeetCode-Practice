@@ -4,8 +4,12 @@ public class Main {
         Solution solution = new Solution();
 
         //test case #1
+//        String pattern = "abba";
+//        String s = "dog cat cat dog";
+
+        //test case #2
         String pattern = "abba";
-        String s = "dog cat cat dog";
+        String s = "dog cat cat fish";
 
         boolean result = solution.wordPattern(pattern, s);
 
