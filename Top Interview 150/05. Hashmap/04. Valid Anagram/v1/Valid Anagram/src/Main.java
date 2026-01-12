@@ -4,8 +4,12 @@ public class Main {
         Solution solution = new Solution();
 
         //test case #1
-        String s = "anagram";
-        String t = "nagaram";
+//        String s = "anagram";
+//        String t = "nagaram";
+
+        //test case #50
+        String s = "aacc";
+        String t = "ccac";
 
         boolean result = solution.isAnagram(s, t);
 

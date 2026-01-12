@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.TreeMap;
 
 public class Solution {
@@ -18,8 +19,8 @@ public class Solution {
 
         //appends char values into tree map
         for(int i = 0; i < s.length(); ++i) {
-            sMap.put(sArray[i], 0);
-            tMap.put(tArray[i], 0);
+            sMap.put(sArray[i], sMap.getOrDefault(sArray[i], 0) + 1);
+            tMap.put(tArray[i], tMap.getOrDefault(tArray[i], 0) + 1);
         }
 
         //returns true or false depending on if the strings are equals or not
