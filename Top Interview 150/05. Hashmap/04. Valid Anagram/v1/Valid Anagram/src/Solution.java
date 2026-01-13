@@ -1,5 +1,4 @@
 import java.util.HashMap;
-import java.util.TreeMap;
 
 public class Solution {
 
@@ -10,8 +9,8 @@ public class Solution {
             return false;
 
         //creates and initializes variables
-        TreeMap<Character, Integer> sMap = new TreeMap<>();
-        TreeMap<Character, Integer> tMap = new TreeMap<>();
+        HashMap<Character, Integer> sMap = new HashMap<>();
+        HashMap<Character, Integer> tMap = new HashMap<>();
 
         //splits string character into char array
         char[] sArray = s.toCharArray();
