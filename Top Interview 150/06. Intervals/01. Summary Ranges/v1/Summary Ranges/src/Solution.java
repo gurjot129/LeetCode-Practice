@@ -17,7 +17,7 @@ class Solution {
 
         //handles 1 element array condition
         if(nums.length == 1) {
-            result.add(nums[0] + "->" + nums[0]);
+            result.add("" + nums[0]);
             return result;
         }
 
@@ -30,14 +30,24 @@ class Solution {
             if(nums[r - 1] == nums[r] - 1) {
                 ++rangeLen;
             } else {
-                result.add(nums[l] + "->" + nums[l + rangeLen]);
+
+                if(rangeLen == 0) {
+                    result.add("" + nums[l]);
+                } else {
+                    result.add(nums[l] + "->" + nums[l + rangeLen]);
+                }
+
                 l = r;
                 rangeLen = 0;
             }
         }
 
-        //handles the last step
-        result.add(nums[l] + "->" + nums[l + rangeLen]);
+        //summarizes the last element
+        if(rangeLen == 0) {
+            result.add("" + nums[l]);
+        } else {
+            result.add(nums[l] + "->" + nums[l + rangeLen]);
+        }
 
         return result;
     }
