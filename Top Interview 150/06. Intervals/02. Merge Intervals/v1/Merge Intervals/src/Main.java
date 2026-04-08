@@ -5,12 +5,18 @@ public class Main {
         Solution solution = new Solution();
 
         //test case #1
+//        int[][] intervals = new int[][] {
+//                {1, 3},
+//                {2, 6},
+//                {8, 10},
+//                {15, 18}
+//            };
+
+        //test case #2
         int[][] intervals = new int[][] {
-                                            {1, 3},
-                                            {2, 6},
-                                            {8, 10},
-                                            {15, 18}
-                                        };
+                {1, 4},
+                {4, 5}
+        };
 
         int[][] result = solution.merge(intervals);
 

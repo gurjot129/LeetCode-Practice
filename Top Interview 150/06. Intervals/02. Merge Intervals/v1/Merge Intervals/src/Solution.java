@@ -13,8 +13,12 @@ class Solution {
             //checks if the specific interval can be merged with the current interval
             //if so, update the current interval's end value
             //if not, add to the result array, and update the current interval with the specific interval's values
-            if((currInterval[0] >= intervals[i][0] && currInterval[1] <= intervals[i][0]) ||
-               (currInterval[0] >= intervals[i][1] && currInterval[1] <= intervals[i][1])) {
+
+            //temp
+            boolean check = currInterval[0] <= intervals[i][0] && intervals[i][0] <= currInterval[1];
+
+            if((currInterval[0] <= intervals[i][0] && intervals[i][0] <= currInterval[1]) ||
+               (currInterval[0] <= intervals[i][1] && intervals[i][1] <= currInterval[1])) {
 
                 currInterval[1] = intervals[i][1];
 
@@ -27,6 +31,11 @@ class Solution {
                 currInterval[1] = intervals[i][1];
             }
         }
+
+        //handles last step
+        result[resCnt][0] = currInterval[0];
+        result[resCnt][1] = currInterval[1];
+        ++resCnt;
 
         //ensures that the array is created with the exact size
         int[][] temp = result;
