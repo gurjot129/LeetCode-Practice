@@ -18,9 +18,12 @@ class Solution {
             boolean check = currInterval[0] <= intervals[i][0] && intervals[i][0] <= currInterval[1];
 
             if((currInterval[0] <= intervals[i][0] && intervals[i][0] <= currInterval[1]) ||
-               (currInterval[0] <= intervals[i][1] && intervals[i][1] <= currInterval[1])) {
+               (currInterval[0] <= intervals[i][1] && intervals[i][1] <= currInterval[1]) ||
+               (intervals[i][0] <= currInterval[0] && currInterval[0] <= intervals[i][1]) ||
+               (intervals[i][0] <= currInterval[1] && currInterval[1] <= intervals[i][1])) {
 
-                currInterval[1] = intervals[i][1];
+                currInterval[0] = Math.min(currInterval[0], intervals[i][0]);
+                currInterval[1] = Math.max(currInterval[1], intervals[i][1]);
 
             } else {
                 result[resCnt][0] = currInterval[0];
