@@ -16,6 +16,9 @@ public class Main {
 
         System.out.println("*** FINAL RESULTS ***");
         System.out.println("Solution: ");
-        System.out.println(result);
+
+        for(int[] arr : result) {
+            System.out.println("{" + arr[0] + ", " + arr[1] + "}");
+        }
     }
 }
