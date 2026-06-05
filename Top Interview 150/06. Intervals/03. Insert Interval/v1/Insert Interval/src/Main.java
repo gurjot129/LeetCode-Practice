@@ -12,7 +12,7 @@ public class Main {
 
         int[] newInterval = new int[] {2, 5};
 
-        int[][] result = solution.insert(intervals, newInterval);
+        int[][] result = solution.insert(intervals, newInterval) ;
 
         System.out.println("*** FINAL RESULTS ***");
         System.out.println("Solution: ");
