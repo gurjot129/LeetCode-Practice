@@ -10,11 +10,11 @@ public class Main {
                 {2, 8},
                 {1, 6},
                 {7, 12}
-        };;
+        };
 
         int result = solution.findMinArrowShots(points);
 
         System.out.println("*** FINAL RESULTS ***");
-        System.out.println("Solution: " + result);}
+        System.out.println("Solution: " + result);
     }
 }
