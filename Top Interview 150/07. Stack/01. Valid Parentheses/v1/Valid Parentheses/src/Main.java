@@ -5,7 +5,13 @@ public class Main {
         Solution solution = new Solution();
 
         //test case #1
-        String s = "()";
+//        String s = "()";
+
+        //test case #2
+//        String s = "()[]{}";
+
+        //test case #3
+        String s = "(]";
 
         boolean result = solution.isValid(s);
 
