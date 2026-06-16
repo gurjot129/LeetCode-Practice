@@ -25,7 +25,6 @@ public class Main {
             curr1.next = new ListNode(values1[i]);
             curr1 = curr1.next;
         }
-        curr1.next = head1.next;
 
 
         int[] values2 = {5,6,4};
@@ -36,7 +35,6 @@ public class Main {
             curr2.next = new ListNode(values2[i]);
             curr2 = curr2.next;
         }
-        curr2.next = head2.next;
 
 
         ListNode result = solution.addTwoNumbers(head1, head2);
@@ -57,6 +55,6 @@ public class Main {
             resStringRev += resString.charAt(i);
         }
 
-        System.out.println(resString);
+        System.out.println(resStringRev);
     }
 }
