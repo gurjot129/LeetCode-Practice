@@ -3,9 +3,16 @@
 class ListNode {
     int val;
     ListNode next;
-    ListNode(int x) {
-        val = x;
-        next = null;
+
+    ListNode() {}
+
+    ListNode(int val) {
+        this.val = val;
+    }
+
+    ListNode(int val, ListNode next) {
+        this.val = val;
+        this.next = next;
     }
 }
 
@@ -17,7 +24,7 @@ public class Main {
         Solution solution = new Solution();
 
         //test case #1
-        int[] values1 = {2,4,3};
+        int[] values1 = {1,2,4};
         ListNode head1 = new ListNode(values1[0]);
         ListNode curr1 = head1;
 
@@ -27,7 +34,7 @@ public class Main {
         }
 
 
-        int[] values2 = {5,6,4};
+        int[] values2 = {1,3,4};
         ListNode head2 = new ListNode(values2[0]);
         ListNode curr2 = head2;
 
@@ -37,13 +44,13 @@ public class Main {
         }
 
 
-        ListNode result = solution.addTwoNumbers(head1, head2);
+        ListNode result = solution.mergeTwoLists(head1, head2);
 
         System.out.println("*** FINAL RESULTS ***");
         System.out.println("Solution: ");
 
         String resString = "";
-        String resStringRev = "";`
+        String resStringRev = "";
         ListNode resCurr = result;
 
         while(resCurr != null) {
