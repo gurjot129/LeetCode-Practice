@@ -49,19 +49,11 @@ public class Main {
         System.out.println("*** FINAL RESULTS ***");
         System.out.println("Solution: ");
 
-        String resString = "";
-        String resStringRev = "";
         ListNode resCurr = result;
 
         while(resCurr != null) {
-            resString += "" + resCurr.val;
+            System.out.print(resCurr.val + " ");
             resCurr = resCurr.next;
         }
-
-        for(int i = resString.length() - 1; i >= 0; --i) {
-            resStringRev += resString.charAt(i);
-        }
-
-        System.out.println(resStringRev);
     }
 }
