@@ -1,17 +1,13 @@
-// Definition for singly-linked list.
-class ListNode {
+// Definition for a Node.
+class Node {
     int val;
-    ListNode next;
+    Node next;
+    Node random;
 
-    ListNode() {}
-
-    ListNode(int val) {
+    public Node(int val) {
         this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
+        this.next = null;
+        this.random = null;
     }
 }
 
@@ -23,26 +19,29 @@ public class Main {
         Solution solution = new Solution();
 
         //test case #1
-        int[] values1 = {1,2,3,4,5};
-        ListNode head1 = new ListNode(values1[0]);
-        ListNode curr1 = head1;
+        Integer[][] values1 = {
+                {7, null},
+                {13, 0},
+                {11, 4},
+                {10, 2},
+                {1, 0}
+        };
+        Node head1 = new Node(values1[0][0]);
+        Node curr1 = head1;
 
-        for (int i = 1; i < values1.length; ++i) {
-            curr1.next = new ListNode(values1[i]);
+        for(int i = 1; i < values1.length; ++i) {
+            curr1.next = new Node(values1[i][0]);
             curr1 = curr1.next;
         }
 
-        int left = 2;
-        int right = 4;
-
-        ListNode result = solution.reverseBetween(head1, left, right);
+        Node result = solution.copyRandomList(head1);
 
         System.out.println("*** FINAL RESULTS ***");
         System.out.println("Solution: ");
 
-        ListNode resCurr = result;
+        Node resCurr = result;
 
-        while (resCurr != null) {
+        while(resCurr != null) {
             System.out.print(resCurr.val + " ");
             resCurr = resCurr.next;
         }
