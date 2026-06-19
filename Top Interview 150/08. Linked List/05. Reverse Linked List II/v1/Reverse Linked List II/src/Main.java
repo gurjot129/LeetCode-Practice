@@ -23,7 +23,20 @@ public class Main {
         Solution solution = new Solution();
 
         //test case #1
-        int[] values1 = {1,2,3,4,5};
+//        int[] values1 = {1,2,3,4,5};
+//        ListNode head1 = new ListNode(values1[0]);
+//        ListNode curr1 = head1;
+//
+//        for (int i = 1; i < values1.length; ++i) {
+//            curr1.next = new ListNode(values1[i]);
+//            curr1 = curr1.next;
+//        }
+//
+//        int left = 2;
+//        int right = 4;
+
+        //test case #2
+        int[] values1 = {5};
         ListNode head1 = new ListNode(values1[0]);
         ListNode curr1 = head1;
 
@@ -32,8 +45,8 @@ public class Main {
             curr1 = curr1.next;
         }
 
-        int left = 2;
-        int right = 4;
+        int left = 1;
+        int right = 1;
 
         ListNode result = solution.reverseBetween(head1, left, right);
 
