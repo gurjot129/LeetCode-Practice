@@ -32,7 +32,7 @@ public class Main {
             curr1 = curr1.next;
         }
 
-        int k = 3;
+        int k = 2;
 
         ListNode result = solution.reverseKGroup(head1, k);
 
