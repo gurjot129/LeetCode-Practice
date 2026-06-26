@@ -9,55 +9,48 @@
  * }
  */
 class Solution {
+
     public ListNode reverseKGroup(ListNode head, int k) {
 
         //creates and initializes variables
-        ListNode dummy = new ListNode(0, head);
-        ListNode leftPrev = dummy;
-        ListNode curr = head;
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode groupPrev = dummy;
 
-        boolean isNullReached = false;
-        boolean isDummyUpdated = false;
+        while (true) {
 
-        while(!isNullReached) {
+            // Find the kth node
+            ListNode kth = groupPrev;
 
-            ListNode currTemp = curr;
-            int count = 0;
-
-            while(count < k && !isNullReached) {
-
-                if(currTemp.next != null) {
-                    currTemp = currTemp.next;
-                    ++count;
-                } else {
-                    isNullReached = true;
-                }
+            for (int i = 0; i < k && kth != null; i++) {
+                kth = kth.next;
             }
 
-            ListNode prev = null;
+            // Not enough nodes left
+            if (kth == null) {
+                break;
+            }
 
-            for(int i = 0; i < k && !isNullReached; ++i) {
+            ListNode groupNext = kth.next;
 
-                ListNode tempNext = curr.next;
+            // Reverse this group
+            ListNode prev = groupNext;
+            ListNode curr = groupPrev.next;
+
+            while (curr != groupNext) {
+                ListNode next = curr.next;
                 curr.next = prev;
-
                 prev = curr;
-                curr = tempNext;
+                curr = next;
             }
 
-            if(!isNullReached) {
+            // Reconnect
+            ListNode temp = groupPrev.next; // old first node
 
-                //update pointers
-                leftPrev.next.next = curr;
-                leftPrev.next = prev;
-            }
+            groupPrev.next = kth;
 
-            if(!isDummyUpdated) {
-                dummy.next = prev;
-                isDummyUpdated = true;
-            }
+            groupPrev = temp;
         }
-
 
         return dummy.next;
     }
