@@ -13,8 +13,12 @@ import java.util.List;
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
 
-        //handles null condition edge case
-        if(head == null) return head;
+        //handles edge cases
+        if(head == null) {
+            return head;
+        } else if(head.next != null && head.next.next == null && head.val == head.next.val) {
+            return null;
+        }
 
         //creates and initializes variables
         ListNode dummy = new ListNode(-101, head);
@@ -23,7 +27,7 @@ class Solution {
         ListNode rightPtr = head.next;
 
         //iterate through the ll until null is reached
-        while(leftPtr.next != null) {
+        while(leftPtr != null && leftPtr.next != null) {
 
             //if duplicate values are found, remove duplicates
             //otherwise shift to next nodes
@@ -37,7 +41,10 @@ class Solution {
                 //change node reference to remove duplicates
                 leftPtrPrev.next = rightPtr.next;
                 leftPtr = leftPtrPrev.next;
-                rightPtr = leftPtr.next;
+
+                if(leftPtr != null) {
+                    rightPtr = leftPtr.next;
+                }
 
             } else {
                 leftPtrPrev = leftPtr;
