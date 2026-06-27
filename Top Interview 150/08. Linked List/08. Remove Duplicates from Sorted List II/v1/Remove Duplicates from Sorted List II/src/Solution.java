@@ -13,6 +13,9 @@ import java.util.List;
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
 
+        //handles null condition edge case
+        if(head == null) return head;
+
         //creates and initializes variables
         ListNode dummy = new ListNode(-101, head);
         ListNode leftPtrPrev = dummy;
