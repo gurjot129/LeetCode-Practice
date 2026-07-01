@@ -23,7 +23,7 @@ public class Main {
         Solution solution = new Solution();
 
         //test case #1
-        int[] values1 = {1,2,3,4,5};
+        int[] values1 = {1,4,3,2,5,2};
         ListNode head1 = new ListNode(values1[0]);
         ListNode curr1 = head1;
 
@@ -32,7 +32,7 @@ public class Main {
             curr1 = curr1.next;
         }
 
-        int x = 2;
+        int x = 3;
 
 
         ListNode result = solution.partition(head1, x);
